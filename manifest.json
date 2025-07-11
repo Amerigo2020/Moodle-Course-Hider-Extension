@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Moodle Course Hider",
+  "version": "1.0",
+  "description": "Automatically hides unwanted courses on Moodle.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.moodle.tum.de/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["keywords.txt"],
+      "matches": ["https://www.moodle.tum.de/*"]
+    }
+  ]
+}
