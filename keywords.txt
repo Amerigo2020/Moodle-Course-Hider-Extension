@@ -1,3 +1,8 @@
+# Moodle Course Hider Keywords
+# Lines starting with # are comments and will be ignored
+# Add one keyword per line to hide courses containing these terms
+# Keywords are case-insensitive
+
 Versammlung
 Fachschaftsvollversammlung
 Studentische
@@ -5,3 +10,5 @@ Fokus
 Practical Course
 IN2064
 MA3409
+(SOT82701, SOT86701) EuroTeQ Collider. Enhance Connections for Sustainable Futures
+Übungen zu Grundlagen: Rechnernetze und Verteilte Systeme (IN0010), Mi, Do, Fr

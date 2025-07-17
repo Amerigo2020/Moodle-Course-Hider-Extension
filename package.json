@@ -1,0 +1,26 @@
+{
+  "name": "moodle-course-hider",
+  "version": "1.1.0",
+  "description": "Chrome extension to hide unwanted courses on TUM Moodle",
+  "private": true,
+  "scripts": {
+    "lint": "eslint script.js",
+    "lint:fix": "eslint script.js --fix",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "keywords": [
+    "chrome-extension",
+    "moodle",
+    "education",
+    "course-management"
+  ],
+  "author": "Nicolas Palencia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/tum-moodle-course-hider.git"
+  }
+}

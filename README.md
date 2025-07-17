@@ -2,13 +2,21 @@
 
 This Chrome extension automatically hides unwanted courses on [TUM Moodle](https://www.moodle.tum.de). It helps declutter your dashboard by filtering out courses based on keywords you define.
 
+## Features
+
+- 🎯 **Smart Filtering**: Hide courses based on customizable keywords
+- 🔄 **Dynamic Updates**: Automatically handles dynamically loaded content
+- 🛡️ **Secure**: Follows Chrome extension security best practices
+- 🚀 **Lightweight**: Minimal performance impact
+- 📝 **Easy Configuration**: Simple text-based keyword management
+
 ---
 
 ## Installation
 
 1. **Download or Clone the Repository**
    - Download the ZIP or run:
-     ```
+     ```bash
      git clone https://github.com/yourusername/tum-moodle-course-hider.git
      ```
    - Open the folder.
@@ -26,15 +34,80 @@ This Chrome extension automatically hides unwanted courses on [TUM Moodle](https
 
 You can edit which courses are hidden by modifying `keywords.txt`:
 
-- Each line is a keyword.
+- Each line is a keyword (case-insensitive matching)
+- Lines starting with `#` are comments and will be ignored
 - Example:
-Versammlung
-Fachschaft
+  ```
+  # Hide student council meetings
+  Versammlung
+  Fachschaft
+  
+  # Hide specific course codes
+  IN2064
+  MA3409
+  ```
 
-
-Any course title containing one of these keywords (case-insensitive) will be hidden.
+Any course title containing one of these keywords will be hidden.
 
 After editing `keywords.txt`, **reload the extension** in `chrome://extensions/` and refresh Moodle.
+
+---
+
+## Development
+
+If you want to contribute or modify the extension:
+
+1. **Install dependencies** (optional, for linting):
+   ```bash
+   npm install
+   ```
+
+2. **Lint the code**:
+   ```bash
+   npm run lint
+   ```
+
+3. **Auto-fix linting issues**:
+   ```bash
+   npm run lint:fix
+   ```
+
+---
+
+## Security & Privacy
+
+- ✅ **No data collection**: The extension doesn't collect or transmit any personal data
+- ✅ **Minimal permissions**: Only requests necessary permissions for TUM Moodle
+- ✅ **Local processing**: All filtering happens locally in your browser
+- ✅ **Open source**: Code is fully auditable
+
+---
+
+## Troubleshooting
+
+### Extension not working?
+1. Check that you're on `https://www.moodle.tum.de`
+2. Reload the extension in `chrome://extensions/`
+3. Refresh the Moodle page
+4. Check browser console for any error messages
+
+### Courses not being hidden?
+1. Verify your keywords in `keywords.txt` are spelled correctly
+2. Remember that matching is case-insensitive
+3. Check that the course title actually contains the keyword
+
+---
+
+## Version History
+
+### v1.1.0
+- 🔒 **Security improvements**: Added timeout handling, input validation
+- 🚀 **Performance**: Debounced DOM updates, improved observer logic
+- 🛠️ **Code quality**: Added ESLint configuration, comprehensive error handling
+- 📖 **Documentation**: Enhanced code comments and README
+
+### v1.0.0
+- Initial release
 
 ---
 
@@ -46,5 +119,5 @@ This project is provided *as is*, with no warranty. Use at your own risk. The au
 
 ## License
 
-MIT License – see [LICENSE](LICENSE) for details.
+MIT License – see [LICENSE](LICENSE.txt) for details.
 

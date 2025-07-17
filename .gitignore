@@ -1,2 +1,35 @@
+# Build artifacts
 MoodleFix
 MoodleFix.pub
+
+# Node modules (if using npm for development)
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Extension package files
+*.crx
+*.pem
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
