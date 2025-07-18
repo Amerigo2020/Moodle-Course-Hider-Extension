@@ -1,6 +1,14 @@
 # TUM Moodle Course Hider Extension
 
+> **🍴 Fork Notice**: This is a fork of [Nicolas-Palencia/Moodle-Course-Hider-Extension](https://github.com/Nicolas-Palencia/Moodle-Course-Hider-Extension) with additional features.
+
 This Chrome extension automatically hides unwanted courses on [TUM Moodle](https://www.moodle.tum.de). It helps declutter your dashboard by filtering out courses based on keywords you define.
+
+## ✨ New Features in This Fork
+
+- 🎓 **Automatic Semester Selection**: Automatically selects "SoSe 2025" when loading the course overview
+- ⚙️ **Configurable Default Semester**: Easy to change the default semester in the code
+- 🔧 **Enhanced Code Quality**: Improved error handling and documentation
 
 ## Features
 
@@ -17,7 +25,7 @@ This Chrome extension automatically hides unwanted courses on [TUM Moodle](https
 1. **Download or Clone the Repository**
    - Download the ZIP or run:
      ```bash
-     git clone https://github.com/yourusername/tum-moodle-course-hider.git
+     git clone https://github.com/Amerigo2020/Moodle-Course-Hider-Extension.git
      ```
    - Open the folder.
 
@@ -50,6 +58,22 @@ You can edit which courses are hidden by modifying `keywords.txt`:
 Any course title containing one of these keywords will be hidden.
 
 After editing `keywords.txt`, **reload the extension** in `chrome://extensions/` and refresh Moodle.
+
+### 🎓 Semester Selection Configuration
+
+This fork automatically selects "SoSe 2025" when you load the course overview. To change the default semester:
+
+1. Open `script.js`
+2. Find the `DEFAULT_SEMESTER` setting in the CONFIG section:
+   ```javascript
+   DEFAULT_SEMESTER: '2025-1', // SoSe 2025
+   ```
+3. Change the value to your preferred semester:
+   - `'2025-1'` = SoSe 2025
+   - `'2024-2'` = WiSe 2024/2025  
+   - `'2024-1'` = SoSe 2024
+   - etc.
+4. **Reload the extension** in `chrome://extensions/` and refresh Moodle.
 
 ---
 
